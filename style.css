@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Caveat+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Hind:wght@300;400&family=Nunito:wght@200&family=PT+Serif&display=swap');
+
+body {
+    background-color: #f2f2f2;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Images/background.jpg);
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url(Images/background.jpg);
+    background-color: rgb(255, 255, 255);
+    background: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    height: 130px;
+}
+
+.form {
+    margin: auto;
+    margin-top: 20px;
+    background: rgb(255, 255, 255);
+    width: 70%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form .input_box {
+    width: 100%;
+    margin-top: 15px;
+
+}
+
+.form .logo_box {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.input_box label {
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 5px;
+}
+
+.input_box .success input,
+.input_box .success select {
+    border-color: #52a04b;
+}
+
+.input_box .error input,
+.input_box .error select {
+    border-color: red;
+}
+
+.input_box .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.form input[type="number"],
+.form input[type="text"],
+.form select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 30px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form button {
+    display: block;
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 500;
+    margin: 20px auto;
+    padding: 12px;
+    width: 50%;
+    background-color: #3A5D9C;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.form a{
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    width: 50%;
+    background-color: #3A5D9C;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover{
+        background-color: black;
+    }
+}
+
+
+.form button:hover {
+    background-color: black;
+}
+
+.popup_container {
+    width: 100%;
+    background: cover;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    width: 350px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: visible;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup p {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.popup button,
+.popup a {
+    width: 100%;
+    margin: 30px 0 10px;
+    padding: 10px 50px;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+
+    &:hover {
+        background-color: green;
+    }
+}
+.drop_down{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 8px 5px;
+    width: 97%;
+    height: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.drop_down img{
+    width: 30px;
+    height: 25px;
+    margin-left: 15px;
+    border-radius: 6px;
+}
+.arrow{
+    font-size: 26px;
+}
+.wrapper{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+.list{
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    cursor: pointer;
+    height: 80px;
+    overflow-y: scroll;
+    width: 100%;
+    border-radius: 15px;
+    display: none;
+}
+.item{
+    display: flex;
+    align-items: center;
+    padding: 8px 5px;
+    gap: 0.6rem;
+}
+.item:hover{
+    background-color: white;
+}
+.show{
+    display: block ;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .form {
+        width: 80%;
+        /* Adjust the width of the form as needed */
+        max-width: 400px;
+    }
+
+    .form input[type="number"],
+    .form input[type="text"],
+    .form select {
+        width: 90%;
+        font-size: 14px;
+        /* Adjust the font size of input fields */
+    }
+
+    .form button,
+    .form a {
+        width: 50%;
+        font-size: 14px;
+        /* Adjust the font size of buttons and links */
+    }
+
+    body {
+        background-image: url(Images/background.jpg);
+        font-size: 14px;
+        /* Keep the background image fixed */
+    }
+    .input_box label {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 14px;
+    }
+
+    .drop_down {
+        width: 93%;
+    }
+
+    .drop_down img {
+        width: 30px;
+        height: 25px;
+        margin-left: 15px;
+        border-radius: 10px;
+    }
+
+    .logo {
+        width: 100px;
+        margin-bottom: 15px;
+        height: 100px;
+    }
+}

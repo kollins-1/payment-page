@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <title>Payment</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="form">
+                <form id="paymentForm" action="popup.html" method="get" onsubmit="return validateInputs()">
+
+                    <div class="logo_box">
+                        <img src="Images/logo_resize.jpg" alt="Logo" class="logo">
+                    </div>
+
+                    <div class="input_box">
+                        <label for="days">Number of days:</label>
+                        <input type="number" id="days" name="days" min="1" max="30" value="" readonly>
+                    </div>
+
+                    <div class="input_box">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" value="" readonly>
+                    </div>
+
+                    <div class="input_box">
+                        <label for="company">Company Name:</label>
+                        <input type="text" id="company" name="company" value="" readonly>
+                    </div>
+
+                    <div class="input_box">
+                        <label for="iban">IBAN No:</label>
+                        <input type="text" id="iban" name="iban" value="" readonly>
+                    </div>
+
+                    <div class="Confirm_button">
+                        <button type="submit">Confirm Payment</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Second page logic
+            const paymentForm = document.getElementById('paymentForm');
+
+            paymentForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (validateInputs()) {
+                    this.submit();
+                    window.location.href = "popup.html"; // Redirect to page 3 on successful validation
+                }
+            });
+
+            const validateInputs = () => {
+                const days = document.getElementById('days');
+                const price = document.getElementById('price');
+                const company = document.getElementById('company');
+                const iban = document.getElementById('iban');
+
+                if (days.value.trim() === '1' || price.value.trim() === '1' || company.value.trim() === '1' || iban.value.trim() === '1') {
+                    alert('Please fill in all fields');
+                    return false;
+                }
+
+                // Additional validation logic if needed
+
+                return true;
+            };
+        });
+    </script>
+</body>
+
+</html>
